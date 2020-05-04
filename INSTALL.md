@@ -1,10 +1,11 @@
+```
 Building on Ubuntu
 $ sudo snap install go --classic
 $ sudo apt-get install -y build-essential
 $ git clone https://github.com/BrightID/idchain.git
 $ cd idchain
 $ make all
-$ echo "export PATH=$PATH:$PWD/build/bin" >> ~/.profile
+$ mv build/bin ..
 $ source ~/.profile
 The above routine tested with go1.14.2 installed by snap. If you have older version of go (you can check by go version), first remove that using sudo rm /usr/bin/go and then use snap as described to install latest version of go.
 
@@ -74,3 +75,4 @@ $ bootnode -nodekey ./geth/nodekey -writeaddress
 The format for enode address that should be added to static-nodes.json is enode://NODE_ID@ip:port.
 The standard port for idchain validators will be 30329.
 The new validator should configure the firewall on its server to open port 30329 to enable others to connect its node.
+```
